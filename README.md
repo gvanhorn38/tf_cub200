@@ -77,5 +77,5 @@ We now have a dataset directory containing tfrecord files prefixed with either `
 
 I'll assume that the path to the dataset directory is stored in the `DATASET_DIR` environment variable for the experiments, for example:
 ```
-$ export DATASET_DIR=/media/drive2/tensorflow_datasets/cub/with_600_val_split
+$ export DATASET_DIR=/home/ubuntu/tensorflow_datasets/cub/with_600_val_split
 ```
