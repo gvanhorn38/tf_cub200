@@ -52,7 +52,7 @@ We have created three arrays holding train, validation and test data. The CUB-20
  * Number of test images: 5794
 
 When creating the datasets we remapped the CUB200 class ids to the range 0-199. As a convenience, we'll create a text file that specifies the text label for each class. 
-```
+```python
 label_text = list(set([(image['class']['label'], image['class']['text']) for image in val]))
 label_text.sort(key=lambda x: x[0])
 with open('codes.txt', 'w') as f:
