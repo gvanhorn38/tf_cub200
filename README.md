@@ -51,6 +51,15 @@ We have created three arrays holding train, validation and test data. The CUB-20
  * Number of validation images: 600
  * Number of test images: 5794
 
+When creating the datasets we remapped the CUB200 class ids to the range 0-199. As a convenience, we'll create a text file that specifies the text label for each class. 
+```
+label_text = list(set([(image['class']['label'], image['class']['text']) for image in val]))
+label_text.sort(key=lambda x: x[0])
+with open('codes.txt', 'w') as f:
+  for label, text in label_text:
+    print >> f, text
+```
+
 We can now pass these arrays to the `create()` method of the tfrecords repo:
 ```python
 
